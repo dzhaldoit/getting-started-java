@@ -6,6 +6,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTests {
+  
+    static {
+        Configuration.pageLoadStrategy = "eager";
+    }
+  
     @Test
     void successfulSearchTest() {
         open("https://www.google.com/");
